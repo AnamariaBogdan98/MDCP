@@ -1,7 +1,34 @@
+<script>
 // Note that we are setting `SameSite=None;` in this example because the example
 // needs to work cross-origin.
 // It is more common not to set the `SameSite` attribute, which results in the default,
 // and more secure, value of `SameSite=Lax;`
+document.cookie = "name=oeschger; SameSite=None; Secure";
+document.cookie = "favorite_food=tripe; SameSite=None; Secure";
+
+function showCookies() {
+  const output = document.getElementById('cookies')
+  output.textContent = '> ' + document.cookie
+}
+
+function clearOutputCookies() {
+  const output = document.getElementById('cookies')
+  output.textContent = ''
+}
+  
+</script>
+<button onclick="showCookies()">Show cookies</button>
+
+<button onclick="clearOutputCookies()">
+  Clear
+</button>
+
+<div>
+  <code id="cookies"></code>
+</div>
+
+
+
 document.cookie = "name=oeschger; SameSite=None; Secure";
 document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 
@@ -30,6 +57,7 @@ Copy to Clipboard
 You can use the [editor on GitHub](https://github.com/AnamariaBogdan98/MDCP/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
 
 ### Markdown
 
@@ -63,3 +91,19 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
 
+// Note that we are setting `SameSite=None;` in this example because the example
+// needs to work cross-origin.
+// It is more common not to set the `SameSite` attribute, which results in the default,
+// and more secure, value of `SameSite=Lax;`
+document.cookie = "name=oeschger; SameSite=None; Secure";
+document.cookie = "favorite_food=tripe; SameSite=None; Secure";
+
+function showCookies() {
+  const output = document.getElementById('cookies')
+  output.textContent = '> ' + document.cookie
+}
+
+function clearOutputCookies() {
+  const output = document.getElementById('cookies')
+  output.textContent = ''
+} 
